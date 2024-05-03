@@ -20,22 +20,30 @@ void addNode()
 	cin >> newNode->name; // Assign value to the data field of the new node
 
 	// Insert the new node in the list
-	if (START == NULL || newNode->noMhs <= START->noMhs) 
+	if (START == NULL || newNode->noMhs <= START->noMhs)
 	{ // step 2: insert the new node at the beginning
 
-		if (START != NULL && newNode->noMhs == START->noMhs) 
+		if (START != NULL && newNode->noMhs == START->noMhs)
 		{
 			cout << "\033[31mDuplicate roll numbers not allowed\033[0m" << endl;
 			return;
 		}
 		// if the list is empty, make the new node the START
 		newNode->next = START; // step 3: make the new node point to the frist node
-		if (START != NULL) 
+		if (START != NULL)
 		{
 			START->prev = newNode; // step 4: make the frist node point to the new node 
 		}
 		newNode->prev = NULL; // step 5: make the new node point to NULL
 		START = newNode;	  // step 6: make the new node the frist node
 	}
-
+	else
+	{
+		// insert the new node in the middle or at the end
+		Node* current = START; // step 1.a: start from the frist node
+		Node* previous = NULL; // step 1.b: make the new node the frist node
+	
 }
+	
+
+
