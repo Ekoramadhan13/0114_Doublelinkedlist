@@ -42,7 +42,13 @@ void addNode()
 		// insert the new node in the middle or at the end
 		Node* current = START; // step 1.a: start from the frist node
 		Node* previous = NULL; // step 1.b: make the new node the frist node
-	
+
+		while (current != NULL && current->noMhs < newNode->noMhs)
+		{							// step 1.c: traverse the list to find the correct position
+			previous = current;		// step 1.d: move the previous to the current node
+			current = current->next;// step 1.e: move the current to the next node
+		}
+
 }
 	
 
