@@ -62,8 +62,15 @@ void addNode()
 			previous->next = newNode; // step 7 make the next field of the previous node point to the new node
 		}
 
+		else
+		{
+			// if previous is still NUll, it means new Node is now the frist node
+			START = newNode;
+		}
+	}
+}
 
-}	
+
 
 	
 
